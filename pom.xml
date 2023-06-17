@@ -4,9 +4,9 @@
   <artifactId>TeamEagleNeww</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 <properties>
-		<maven.compiler.source>17</maven.compiler.source>
-		<maven.compiler.target>17</maven.compiler.target>
-	</properties>
+        <maven.compiler.source>20.0.1</maven.compiler.source>
+        <maven.compiler.target>20.0.1</maven.compiler.target>
+    </properties>
 
 <dependencies>
 		<dependency>
