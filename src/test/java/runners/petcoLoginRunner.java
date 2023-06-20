@@ -13,6 +13,6 @@ import io.cucumber.junit.CucumberOptions;
 		dryRun = false
 		)
 
-public class teslaLoginRunner {
+public class petcoLoginRunner {
 
 }

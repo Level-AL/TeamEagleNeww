@@ -10,7 +10,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class teslaLoginSteps extends cM{
+public class petcoLoginSteps extends cM{
 	@Given("the user is on the login page")
 	public void the_user_is_on_the_logi_page() {
 	   String pageTitle = driverClass.getDriver().getTitle();
