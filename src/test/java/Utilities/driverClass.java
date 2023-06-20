@@ -70,7 +70,7 @@ public class driverClass {
 	                break;
 	            }
 
-	            driver.get(ConfigurationReader.getProperty("tesla"));
+	            driver.get(ConfigurationReader.getProperty("petco"));
 	            driver.manage().window().maximize();
 	            driver.manage().timeouts().implicitlyWait(Constants.implicit_wait_time, TimeUnit.SECONDS);
 	            
