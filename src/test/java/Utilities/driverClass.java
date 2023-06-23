@@ -1,9 +1,6 @@
 package Utilities;
 
 
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -23,7 +20,7 @@ public class driverClass {
 	
 	public static WebDriver driver;
 	
-	@BeforeTest (alwaysRun = true )
+	
 	public static WebDriver getDriver() {
 		
 		
@@ -79,7 +76,7 @@ public class driverClass {
 	        return driver;
 	    }
 	
-    @AfterTest(alwaysRun = true)
+
 	public static void tearDown() {
         if (driver != null) {
             driver.close();
