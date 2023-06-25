@@ -13,7 +13,7 @@ import io.cucumber.java.en.When;
 public class petcoLoginSteps extends cM{
 	@Given("the user is on the login page")
 	public void the_user_is_on_the_logi_page() {
-	   String pageTitle = driverClass.getDriver().getTitle();
+	    String pageTitle = driverClass.getDriver().getTitle();
 	    System.out.println(pageTitle);
 	    Assert.assertEquals("Sign in", pageTitle);
 	}
