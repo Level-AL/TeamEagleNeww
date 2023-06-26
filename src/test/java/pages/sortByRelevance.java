@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import Utilities.driverClass;
 
-public class sortingByRelevance {
+public class sortByRelevance {
 
-	public sortingByRelevance() {
+	public sortByRelevance() {
 		PageFactory.initElements(driverClass.getDriver(), this);
 	}
 	
@@ -27,6 +27,14 @@ public class sortingByRelevance {
 	public WebElement priceMenu;
 	@FindBy (xpath = "//*[@id='section_list_0_3_3074457345618259659_4099276460824412706']/div/div[2]/div/a")
 	public WebElement priceFilter;
-	@FindBy (xpath = "//*[@class='dropdown-style']/select")
+	@FindBy (xpath = "//*[@id='product-listing-sort-by_4_3074457345618259661_4099276460824412711']")
 	public WebElement relevanceFilter;
+	@FindBy (xpath = "//*[@id='product_tile_val_1928003']")
+	public WebElement productName;
+	@FindBy (xpath = "//*[@id='offerPrice_1928003']")
+	public WebElement productPrice;
+	@FindBy (xpath = "//*[@class='plp-same-day-delivery italic']/span")
+	public WebElement productDelivery;
+	@FindBy (xpath = "//*[@id='searchBasedNavigation_widget_4_3074457345618259661_4099276460824412711']")
+	public WebElement allProducts;
 }

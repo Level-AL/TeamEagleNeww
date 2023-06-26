@@ -17,5 +17,7 @@ public class brandNavigation {
 	@FindBy (xpath = "//*[@class='slide-out-wrapper-styled___SlideOutWrapper-sc-c0b7f430-0 jmUblu']/div/ul/li[13]/button")
 	public WebElement shopByBrand;
 	@FindBy (xpath = "//*[@class='flyout-styled__FlyoutInnerContainer-sc-317a9e89-3 fzClhA']/div/a")
-	public WebElement wholeHearted; 
+	public WebElement wholeHearted;
+	@FindBy (xpath = "//*[@id='searchBasedNavigation_widget_4_3074457345618259661_4099276460824412711']")
+	public WebElement allProducts;
 }
