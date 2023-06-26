@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.UnexpectedTagNameException;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class  cM  {
+public class cM extends pageInitializer {
 
 	// This method is for sending String to the element we have given
 	// @param : WebElement element = is accepting the WebElement where we
