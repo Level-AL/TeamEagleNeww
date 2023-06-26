@@ -12,6 +12,6 @@ import io.cucumber.junit.CucumberOptions;
 		glue = "stepDefinition",
 		dryRun = false
 		)
-public class sortingByRelevance {
+public class sortByRelevanceRunner {
 
 }

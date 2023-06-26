@@ -33,4 +33,6 @@ public class filterSettings {
 	public WebElement productPrice;
 	@FindBy (xpath = "//*[@class='plp-same-day-delivery italic']/span")
 	public WebElement productDelivery;
+	@FindBy (xpath = "//*[@id='searchBasedNavigation_widget_4_3074457345618259661_4099276460824412711']")
+	public WebElement allProducts;
 }

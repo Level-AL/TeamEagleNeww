@@ -63,13 +63,11 @@ public class filterSettingsSyed extends cM {
 
 	@Then("the user should see the accurate results")
 	public void the_user_should_see_the_accurate_results() {
-		String productName = fs.productName.getText();
-		String productPrice = fs.productPrice.getText();
-		String productDelivery = fs.productDelivery.getText();
-		System.out.println("Example Product:");
-		System.out.println(productName);
-		System.out.println(productPrice);
-		System.out.println(productDelivery);
+		String filteredProducts = fs.allProducts.getText();
+		System.out.println("--------------------------------------------------");
+		System.out.println("FILTERED PRODUCTS:");
+	    System.out.println("--------------------------------------------------");
+		System.out.println(filteredProducts);
 	}
 	
 }
