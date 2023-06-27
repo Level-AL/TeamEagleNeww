@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions;
 		features = "src/test/resources/features/Shahzaibs.feature",
 		glue = "stepDefinition",
 		dryRun = false
-//		,tags="@test1"
+		,tags="@test1"
 		
 		)
 public class ShahzaibsRunner {
