@@ -271,9 +271,22 @@ public class  cM  {
 	}
 	
 	
+	//----------------------List------------------//
 	
-	
-	
+	public static void clickSpecificElementInListByText(List<WebElement> listOfWebElement,
+            String textOfSpecificElement) {
+
+        String text;
+
+        for (int i = 0; i < listOfWebElement.size(); i++) {
+
+            text = listOfWebElement.get(i).getText();
+            if (text.contains(textOfSpecificElement)) {
+                listOfWebElement.get(i).click();
+            }
+        }
+
+    }
 	
 	
 	

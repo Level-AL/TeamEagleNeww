@@ -30,7 +30,7 @@ public class driverClass {
 	        if (driver == null) {
 
 	            
-	            switch (ConfigurationReader.getProperty("browser")) {
+	            switch (ConfigurationReader.getProperty("browser3")) {
 
 	            case "chrome":
 	                WebDriverManager.chromedriver().setup();

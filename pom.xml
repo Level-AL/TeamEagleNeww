@@ -50,5 +50,15 @@
 			<artifactId>cucumber-junit</artifactId>
 			<version>7.12.0</version>
 		</dependency>
-	</dependencies>
+		<dependency>
+			<groupId>Selenium_FrameWork.Practice</groupId>
+			<artifactId>Selenium_FrameWork.Practice</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>introToSeleinum_Cohort14</groupId>
+			<artifactId>introToSeleinum_Cohort14</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+</dependencies>
 </project>
