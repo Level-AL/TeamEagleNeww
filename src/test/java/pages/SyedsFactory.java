@@ -1,13 +1,13 @@
 package pages;
 
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WebElement; 
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.driverClass;
 
-public class relevantProduct {
- public relevantProduct() {
+public class SyedsFactory {
+ public SyedsFactory() {
 	 PageFactory.initElements(driverClass.getDriver(), this);
  }
  
@@ -39,7 +39,7 @@ public class relevantProduct {
 	public WebElement firstRelevantProduct;
 	@FindBy (xpath = "//*[@class='at-element-marker']/title")
 	public WebElement productPageTitle;
-	@FindBy (xpath = "//*[@class='product-name-styled__EllipsisTextContainer-sc-52c6fcb-3 fdkWtY']")
+	@FindBy (xpath = "//*[@class='product-name-styled__RedesignProductNameContainer-sc-52c6fcb-2 cZoouC']/h1")
 	public WebElement relevantProductTitle;
 	@FindBy (xpath = "//*[@class='price-row-styled__PriceRowContainer-sc-cd8e8c27-1 zyTvb']") 
 	public WebElement relevantProductPrice;

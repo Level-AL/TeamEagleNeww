@@ -17,17 +17,17 @@ public class brandNavigationSyed extends cM {
 	}
 	@When("the user clicks on Shop Menu")
 	public void the_user_clicks_on_shop_menu() {
-		bn.shopMenu.click();
+		syedsfactory.shopMenu.click();
 	    wait(3);
 	}
 	@When("the user clicks on Shop By Brand menu")
 	public void the_user_clicks_on_shop_by_brand_menu() {
-		bn.shopByBrand.click();
+		syedsfactory.shopByBrand.click();
 	    wait(3);
 	}
 	@When("the user clicks on brand Whole Hearted")
 	public void the_user_clicks_on_brand_whole_hearted() {
-		bn.wholeHearted.click();
+		syedsfactory.wholeHearted.click();
 	    wait(3);
 	}
 	@Then("the user should be able to navigate to the Whole Hearted page")
