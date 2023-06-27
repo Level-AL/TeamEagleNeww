@@ -37,9 +37,7 @@ public class SyedsFactory {
 	public WebElement allProducts;
 	@FindBy (xpath = "//*[@id='product_tile_val_1928003']")
 	public WebElement firstRelevantProduct;
-	@FindBy (xpath = "//*[@class='at-element-marker']/title")
-	public WebElement productPageTitle;
-	@FindBy (xpath = "//*[@class='product-name-styled__RedesignProductNameContainer-sc-52c6fcb-2 cZoouC']/h1")
+	@FindBy (xpath = "//*[@class='price-stack-styled__PriceForm-sc-a0629737-0 khXXph']/div/div/h1")
 	public WebElement relevantProductTitle;
 	@FindBy (xpath = "//*[@class='price-row-styled__PriceRowContainer-sc-cd8e8c27-1 zyTvb']") 
 	public WebElement relevantProductPrice;
