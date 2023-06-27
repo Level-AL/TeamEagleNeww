@@ -22,19 +22,19 @@ public class filterSettingsSyed extends cM {
 
 	@When("the user clicks on the Shop Menu")
 	public void the_user_clicks_on_the_shop_menu() {
-		fs.shopMenu.click();
+		syedsfactory.shopMenu.click();
 		wait(3);
 	}
 
 	@When("the user clicks on Shop By Brand")
 	public void the_user_clicks_on_shop_by_brand() {
-		fs.shopByBrand.click();
+		syedsfactory.shopByBrand.click();
 		wait(3);
 	}
 
 	@When("the user clicks on the brand Whole Hearted")
 	public void the_user_clicks_on_the_brand_whole_hearted() {
-		fs.wholeHearted.click();
+		syedsfactory.wholeHearted.click();
 		wait(3);
 	}
 
@@ -42,28 +42,28 @@ public class filterSettingsSyed extends cM {
 	public void the_user_selects_the_dog_filter() {
 		js.executeScript("window.scrollBy(0, 550)", "");
 		wait(3);
-		fs.dogFilter.click();
+		syedsfactory.dogFilter.click();
 	}
 
 	@When("the user clicks on the Same Day Delivery filter")
 	public void the_user_clicks_on_the_same_day_delivery_filter() {
 		js.executeScript("window.scrollBy(0, 550)", "");
 		wait(3);
-		fs.sameDayDelivery.click();
+		syedsfactory.sameDayDelivery.click();
 	}
 
 	@When("the user selects the Price Range")
 	public void the_user_selects_the_price_range() {
 		js.executeScript("window.scrollBy(0, 500)", "");
 		wait(3);
-		fs.priceMenu.click();
+		syedsfactory.priceMenu.click();
 		wait(3);
-		fs.priceFilter.click();
+		syedsfactory.priceFilter.click();
 	}
 
 	@Then("the user should see the accurate results")
 	public void the_user_should_see_the_accurate_results() {
-		String filteredProducts = fs.allProducts.getText();
+		String filteredProducts = syedsfactory.allProducts.getText();
 		System.out.println("--------------------------------------------------");
 		System.out.println("FILTERED PRODUCTS:");
 	    System.out.println("--------------------------------------------------");

@@ -13,7 +13,9 @@ import io.cucumber.java.en.When;
 public class petcoLoginSteps extends cM{
 	@Given("the user is on the login page")
 	public void the_user_is_on_the_logi_page() {
-	    String pageTitle = driverClass.getDriver().getTitle();
+		String loginPage = "https://www.petco.com/shop/AjaxLogonForm?myAcctMain=1&catalogId=10051&langId=-1&storeId=10151&myAccountActivePage=myAccount";
+		driverClass.getDriver().navigate().to(loginPage);
+		String pageTitle = driverClass.getDriver().getTitle();
 	    System.out.println(pageTitle);
 	    Assert.assertEquals("Sign in", pageTitle);
 	}
