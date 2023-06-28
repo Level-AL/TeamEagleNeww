@@ -16,7 +16,7 @@ import io.cucumber.java.en.When;
 public class SyedsStepDefinitions extends cM {
 	JavascriptExecutor js = (JavascriptExecutor) driverClass.getDriver();
 	Actions action = new Actions(driverClass.getDriver());
-	 // Test Case 1
+	    // Test Case 1
 		@Given("The user is on the Home Page")
 		public void the_user_is_on_the_home_page() {
 			String pageTitle = driverClass.getDriver().getTitle();
