@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: mac
 Build-Jdk: 17.0.6
+=======
+Built-By: durra
+Build-Jdk: 17.0.7
+>>>>>>> 0e0c73887371164d4c99d7de60cdc8cc398ddceb
 Created-By: Maven Integration for Eclipse
 
