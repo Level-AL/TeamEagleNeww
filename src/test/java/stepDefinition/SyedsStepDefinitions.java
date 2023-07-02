@@ -16,7 +16,7 @@ import io.cucumber.java.en.When;
 public class SyedsStepDefinitions extends cM {
 	JavascriptExecutor js = (JavascriptExecutor) driverClass.getDriver();
 	Actions action = new Actions(driverClass.getDriver());
-	 // Test Case 1
+	    // Test Case 1
 		@Given("The user is on the Home Page")
 		public void the_user_is_on_the_home_page() {
 			String pageTitle = driverClass.getDriver().getTitle();
@@ -234,11 +234,11 @@ public class SyedsStepDefinitions extends cM {
 		@When("clicks on the first product in the list pf products")
 		public void clicks_on_the_first_product_in_the_list_pf_products() {
 			js.executeScript("window.scrollBy(0, 550)", "");
+			wait(3);
 			syedsfactory.firstRelevantProduct.click();
 		}
 		@Then("the user should be able to see the name price and description of the selected product")
 		public void the_user_should_be_able_to_see_the_name_price_and_description_of_the_selected_product() {
-		    String productPageTitle = syedsfactory.productPageTitle.getText();
 		    String productTitle = syedsfactory.relevantProductTitle.getText();
 		    String productPrice = syedsfactory.relevantProductPrice.getText();
 		    String productDescriptionType = syedsfactory.relevantProductDescriptionType.getText();
@@ -246,9 +246,8 @@ public class SyedsStepDefinitions extends cM {
 			System.out.println("--------------------------------------------------");
 	        System.out.println("DESIRED PRODUCT DETAILS:");
 			System.out.println("--------------------------------------------------");
-	        System.out.println(productPageTitle);
-		    System.out.println(productTitle);
-		    System.out.println(productPrice);
+		    System.out.println("Product Title: " + productTitle);
+		    System.out.println("Product Price: " + productPrice);
 		    System.out.println(productDescriptionType + " "  + productDescriptionValue);
 		}
 
