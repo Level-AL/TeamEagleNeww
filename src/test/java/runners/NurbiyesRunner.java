@@ -8,16 +8,11 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith (Cucumber.class)
 @CucumberOptions(
 		plugin = {"pretty", "html:target/cucumber-report.html", "json:target/cucumber.json"},
-		features = "src/test/resources/features/SyedsFeatures.feature",
+		features = "src/test/resources/features/NurbiyesFeatures.feature",
 		glue = "stepDefinition",
-<<<<<<< HEAD:src/test/java/runners/petcoLoginRunner.java
-		dryRun = false
-		
-=======
 		dryRun = false,
-		tags = "@testCase04"
->>>>>>> 0e0c73887371164d4c99d7de60cdc8cc398ddceb:src/test/java/runners/SyedsRunner.java
+		tags = ""
 		)
-public class SyedsRunner {
-	
+public class NurbiyesRunner {
+
 }

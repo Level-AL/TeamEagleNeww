@@ -15,6 +15,14 @@ public class Cms {
     //scroll down a page
     a.sendKeys(Keys.PAGE_DOWN).build().perform();}
 	
+	
+	
+
+	public static void scrollPageUp() {
+	Actions a = new Actions(driverClass.getDriver());
+    //scroll down a page
+    a.sendKeys(Keys.PAGE_UP).build().perform();}
+	
 	//------------------------------------------------------------------//
 	
 	

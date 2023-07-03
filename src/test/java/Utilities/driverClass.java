@@ -25,68 +25,13 @@ public class driverClass {
 	
 	public static WebDriver getDriver() {
 		
-//		WebDriverManager.chromedriver().setup();
-//		driver = new ChromeDriver();
-		
-<<<<<<< HEAD
-	        if (driver == null) {
 
-	            
-	            switch (ConfigurationReader.getProperty("browser3")) {
-
-	            case "chrome":
-	                WebDriverManager.chromedriver().setup();
-	                driver = new ChromeDriver();
-	                driver.manage().window().maximize();
-	                driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	                break;
-	            case "chrome-headless":
-	                WebDriverManager.chromedriver().setup();
-	                driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
-	                break;
-	            case "firefox":
-	                WebDriverManager.firefoxdriver().setup();
-	                driver = new FirefoxDriver();
-	                break;
-	            case "firefox-headless":
-	                WebDriverManager.firefoxdriver().setup();
-	                driver = new FirefoxDriver(new FirefoxOptions().setHeadless(true));
-	                break;
-	            case "edge":
-
-	                if (!System.getProperty("os.name").toLowerCase().contains("windows")) {
-	                    throw new WebDriverException("Your OS doesn't support Edge");
-	                }
-
-	                WebDriverManager.edgedriver().setup();
-	                driver = new EdgeDriver();
-	                break;
-	            case "safari":
-
-	                if (!System.getProperty("os.name").toLowerCase().contains("mac")) {
-	                    throw new WebDriverException("Your OS doesn't support Safari");
-	                }
-
-	                WebDriverManager.safaridriver().setup();
-	                driver = new SafariDriver();
-	                break;
-	            }
-
-	            driver.get(ConfigurationReader.getProperty("petco"));
-	            driver.manage().window().maximize();
-	            driver.manage().timeouts().implicitlyWait(Constants.implicit_wait_time, TimeUnit.SECONDS);
-	            
-
-	        }
-	        return driver;
-	    }
-=======
 		//Use switch case to switch between webdrivers based on the value passed. Example: Chrome, Firefox
 		
 		if (driver == null) {
 			//to make sure the driver doesn't already have a value.
 			
-			switch(ConfigurationReader.getProperty("browser")) {
+			switch(ConfigurationReader.getProperty("browser3")) {
 			
 			case "chrome":
 				WebDriverManager.chromedriver().setup();
@@ -126,7 +71,7 @@ public class driverClass {
 			
 			}
 			
-			driver.get(ConfigurationReader.getProperty("petco"));
+			driver.get(ConfigurationReader.getProperty("petcoLogin"));
 			driver.manage().window().maximize();
 	        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	        pageInitializer.initialize();
@@ -135,7 +80,7 @@ public class driverClass {
 		
 		return driver;
 	}
->>>>>>> 0e0c73887371164d4c99d7de60cdc8cc398ddceb
+
 	
 	public static void tearDown() {
 		if(driver!=null) {
