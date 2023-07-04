@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-06-18T04:23:22 EDT" name="Default suite" finished-at="2023-06-18T04:23:33 EDT" duration-ms="10301">
+    <groups>
+    </groups>
+    <test started-at="2023-06-18T04:23:22 EDT" name="Default test" finished-at="2023-06-18T04:23:33 EDT" duration-ms="10301">
+      <class name="Tesla.openBrowser">
+        <test-method is-config="true" signature="teslaOpenBrowser()[pri:0, instance:Tesla.openBrowser@f6efaab]" started-at="2023-06-18T04:23:22 EDT" name="teslaOpenBrowser" finished-at="2023-06-18T04:23:28 EDT" duration-ms="5554" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teslaOpenBrowser -->
+        <test-method signature="homePageWithThreeSlidersOnly()[pri:0, instance:Tesla.openBrowser@f6efaab]" started-at="2023-06-18T04:23:28 EDT" name="homePageWithThreeSlidersOnly" finished-at="2023-06-18T04:23:33 EDT" duration-ms="4682" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageWithThreeSlidersOnly -->
+      </class> <!-- Tesla.openBrowser -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

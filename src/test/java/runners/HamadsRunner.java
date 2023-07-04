@@ -6,13 +6,13 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith (Cucumber.class)
-@CucumberOptions (
+@CucumberOptions(
 		plugin = {"pretty", "html:target/cucumber-report.html", "json:target/cucumber.json"},
-		features = "src/test/resources/features",
+		features = "src/test/resources/features/HamadsFeatures.feature",
 		glue = "stepDefinition",
-		dryRun = false
+		dryRun = false,
+		tags = "@test1"
 		)
-
-public class petcoLoginRunner {
+public class HamadsRunner {
 
 }
