@@ -6,13 +6,14 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith (Cucumber.class)
-@CucumberOptions (
+@CucumberOptions(
 		plugin = {"pretty", "html:target/cucumber-report.html", "json:target/cucumber.json"},
-		features = "src/test/resources/features/DogPageLoading.feature",
+		features = "src/test/resources/features/NaransFeatures.feature",
 		glue = "stepDefinition",
-		dryRun = false
+		dryRun = false,
+		tags = ""
 		)
-
-public class DogPageLoadingRunner {
-
+public class NaransRunner {
+	
 }
+
