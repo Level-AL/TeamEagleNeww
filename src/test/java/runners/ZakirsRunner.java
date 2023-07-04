@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 		features = "src/test/resources/features/ZakirsFeatures.feature",
 		glue = "stepDefinition",
 		dryRun = false,
-		tags = "@testcase03"
+		tags = "@testcase01"
 		)
 public class ZakirsRunner {
 
