@@ -265,9 +265,10 @@ public class cM extends pageInitializer {
 		actions.dragAndDrop(element1, element2).perform();;
 	}
 //	doubleClick
-	public static void doubleClick () {
+	public static void doubleClick (WebElement element) {
 		Actions actions = new Actions(driverClass.getDriver());
 		actions.doubleClick().perform();
+		
 	}
 	
 	

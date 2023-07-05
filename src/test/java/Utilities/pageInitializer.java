@@ -16,7 +16,7 @@ public class pageInitializer extends driverClass {
 	public static HamadsFactory hamadsfactory;
 	public static ShahzaibsFactory shahzaibsfactory;
 	public static ZakirsFactory zakirsfactory;
-	public static NurbiyesFactory nurbiyesfactory;
+	public static NurbiyesFactory nf;
 	public static TrooksFactory trooksfactory;
 	public static NaidansFactory naidansfactory;
 	public static NaransFactory naransfactory;
@@ -26,7 +26,7 @@ public class pageInitializer extends driverClass {
 	   hamadsfactory = new HamadsFactory();
 	   shahzaibsfactory = new ShahzaibsFactory();
 	   zakirsfactory = new ZakirsFactory();
-	   nurbiyesfactory = new NurbiyesFactory();
+	   nf = new NurbiyesFactory();
 	   trooksfactory = new TrooksFactory();
 	   naidansfactory = new NaidansFactory();
 	   naransfactory = new NaransFactory();
