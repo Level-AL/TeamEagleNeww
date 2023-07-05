@@ -81,10 +81,16 @@ public class AlexsFactory {
 	@FindBy (xpath = "//input[@class='input-styled__FloatInput-sc-f448db3e-5 kAqfEs']")
 	public WebElement searchBar;
 	
-	@FindBy (xpath = "//button[@class='search-styled__SearchButton-sc-53f6302e-1 gyJbhl']")
-	public WebElement searchButton;
+	@FindBy (xpath = "//a[@data-track-widget-value='dog food']")
+	public WebElement dogFoodLink;
 	
 	@FindBy (xpath = "//a[text()='Search: \"dog food\"']")
 	public WebElement searchDogFoodValidation; 
+	
+	@FindBy (xpath = "//button[@class='shared-styled__SecondaryNavigationButton-sc-cec79f7a-1 eyPIXK']")
+	public WebElement accountButton;
+	
+	@FindBy (xpath = "//button[@class='shared-styled__Button-sc-cec79f7a-0 xanLj']")
+	public WebElement signInButton;
 }
 

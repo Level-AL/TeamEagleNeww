@@ -1,12 +1,9 @@
 package stepDefinition;
 
-import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.WebDriver;
 
 import Utilities.cM;
 import Utilities.driverClass;
-import Utilities.pageInitializer;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -50,23 +47,24 @@ public class AlexsStepDefinitions extends cM {
 
 	}
 
-	@And("user fills in their name and your name")
-	public void user_fills_in_their_name_and_your_name() {
-		cM.waitForClickability(af.theirNameInput);
-		af.theirNameInput.sendKeys("goat");
-		cM.waitForClickability(af.yourNameInput);
-	    af.yourNameInput.sendKeys("shafkat");
-	}
+//	@And("user fills in their name and your name")
+//	public void user_fills_in_their_name_and_your_name() {
+//		cM.explicitWait();
+//		af.theirNameInput.sendKeys("goat");
+//		cM.explicitWait();
+//	    af.yourNameInput.sendKeys("shafkat");
+//	    cM.explicitWait();
+//	}
 
-	@And("user clicks SendADigitalCard")
-	public void user_clicks_send_a_digital_card() {
-		cM.waitForClickability(af.sendADigitalCard);
-		af.sendADigitalCard.click();
-	}
+//	@And("user clicks SendADigitalCard")
+//	public void user_clicks_send_a_digital_card() {
+//		cM.waitForClickability(af.sendADigitalCard);
+//		af.sendADigitalCard.click();
+//	}
 
 	@And("user clicks HowMuch")
 	public void user_clicks_how_much() {
-		cM.waitForClickability(af.howMuchButton);
+		cM.waitForVisibilty(af.howMuchButton);
 		af.howMuchButton.click();
 	}
 
@@ -122,35 +120,6 @@ public class AlexsStepDefinitions extends cM {
 	
 	
 	
-	
-//	WebDriver driver;
-//	@Given("User is on the login page")
-//	public void user_is_on_the_login_page() {
-//		driver.get("https://www.petco.com/shop/LogonForm");
-//		driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//        pageInitializer.initialize();
-//	}
-//
-//	@And("user fills in valid email and password")
-//	public void user_fills_in_valid_email_and_password() {
-//	   af.loginEmailInput.sendKeys("teamEagle91210@gmail.com");
-//	   af.loginPasswordInput.sendKeys("Teameagle123321");
-//	}
-//
-//	@And("user clicks button sign in")
-//	public void user_clicks_button_sign_in() {
-//	 af.signInButtonLogin.click();
-//	}
-//
-//	@Then("verify that homePage is showing")
-//	public void verify_that_home_page_is_showing() {
-//		if (af.homeButtonHomePage.isDisplayed()) {
-//            System.out.println("Login Completed");
-//        } else {
-//            System.out.println("Login FAILED!!");
-//        }
-//	}
 
 	
 	
@@ -158,34 +127,7 @@ public class AlexsStepDefinitions extends cM {
 	
 	
 	
-//	
-//	
-//	@Given("User is on the homePage")
-//	public void user_is_on_the_homepage() {
-//	    driverClass.getDriver();
-//	}
-//
-//	@And("clicks on search bar")
-//	public void clicks_on_search_bar() {
-//	    af.searchBar.click();
-//	}
-//
-//	@And("user enter valid search term dog food")
-//	public void user_enter_valid_search_term_dog_food() {
-//	   af.searchBar.sendKeys("dog food");
-//	}
-//
-//	@And("user clicks yellow search button on bar")
-//	public void user_clicks_yellow_search_button_on_bar() {
-//	    af.searchButton.click();
-//	}
-//
-//	@Then("verify landing on dog food page")
-//	public void verify_landing_on_dog_food_page() {
-//		if (af.searchDogFoodValidation.isDisplayed()) {
-//            System.out.println("Search Success");
-//        } else {
-//            System.out.println("Search FAILED!!");
-//        }
-//	}
+
+	
+	
 }
