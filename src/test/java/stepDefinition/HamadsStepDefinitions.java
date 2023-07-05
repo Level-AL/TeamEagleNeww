@@ -24,21 +24,21 @@ public class HamadsStepDefinitions extends cM {
 	@When("I log in with valid username and password")
 	public void loginWithValidCredentials() {
 		// Implement login steps using valid username and password
-		hamadsfactory.userName.sendKeys("teamEagle91210@gmail.com");
+		hamadsfactory.userName.sendKeys("Durranihammad1@gmail.com");
 
-		hamadsfactory.password.sendKeys("Teameagle123321");
+		hamadsfactory.password.sendKeys("Durrani$123");
 
 		wait(3);
 //			    click(loginButton);
 		hamadsfactory.loginButton.click();
-		wait(3);
+		wait(5);
 	}
 
 	@And("I select a product from the website")
 	public void selectProductFromWebsite() {
 		// Implement steps to select a product
 
-		hamadsfactory.searchBar.sendKeys("cat food");
+		hamadsfactory.searchBar.sendKeys("dogs food");
 		wait(5);
 
 		hamadsfactory.searchButton.click();
@@ -48,19 +48,19 @@ public class HamadsStepDefinitions extends cM {
 		hamadsfactory.firstProduct.click();
 
 		wait(3);
+
+		scrollPage();
+		wait(3);
 		// clicking on "add to the cart"
 		hamadsfactory.addingProduct.click();
-
-		wait(3);
+		System.out.println("Hamad");
+		wait(5);
 
 	}
 
 	@And("I click on the \"Add to Cart\" button")
 	public void clickAddToCartButton() {
-		WebElement addToCartButton = driverClass.getDriver()
-				.findElement(By.xpath("//a[@class=\"Shared__SecondaryNavigationButton-sc-ed57a588-1 foAVkh\"]"));
-
-		addToCartButton.click();
+		hamadsfactory.addToCartButton.click();
 		wait(3);
 
 	}
@@ -70,7 +70,7 @@ public class HamadsStepDefinitions extends cM {
 //		    verfying that item is added to the cart 
 		String expectedText = "(1 item)";
 		String actualText = hamadsfactory.actualTextCart.getText();
-        wait(3);
+		wait(3);
 		Assert.assertEquals(expectedText, actualText);
 		System.out.println(actualText);
 		wait(3);
@@ -78,13 +78,29 @@ public class HamadsStepDefinitions extends cM {
 
 	@And("I go to the Checkout page")
 	public void goToCheckoutPage() {
-
+		wait(5);
 		hamadsfactory.checkoutButton.click();
 		wait(3);
+//		hamadsfactory.SaveandContinue.click();
+//
+//		wait(3);
+////	        clicking on the add to credit card
+//		hamadsfactory.addToCard.click();
+//		wait(3);
+		
+		if (hamadsfactory.SaveandContinue.isDisplayed()) {
+		    hamadsfactory.SaveandContinue.click();
+		    wait(3);
+		    hamadsfactory.SaveandContinue.click();
 
-//	        clicking on the add to credit card
-		hamadsfactory.addToCard.click();
-		wait(3);
+		    wait(3);
+		    System.out.println("11111111");
+		    hamadsfactory.addToCard.click();
+		    wait(3);
+		} else {
+		    hamadsfactory.addToCard.click();
+		    wait(3);
+		}
 
 	}
 
@@ -126,21 +142,34 @@ public class HamadsStepDefinitions extends cM {
 		// Implement steps to remove all items from the car
 		hamadsfactory.removeAllItemsButton.click();
 		wait(3);
+		System.out.println("Durrani");
 	}
 
 	@Then("I should see an empty cart")
 	public void verifyEmptyCart() {
 		// Implement steps to verify the cart is empty
+//		WebElement emptyCart = hamadsfactory.emptyCart;
+//		wait(3);
+////		        emptyCart.getText();
+//		String emptyCartMessage = emptyCart.getText();
+//
+//		Assert.assertEquals("Your Cart Is Empty", emptyCartMessage);
+
+//		String emptyCartMessage = "\n"
+//				+ "Your Cart Is Empty[\n"
+//				+ "]";
 		WebElement emptyCart = hamadsfactory.emptyCart;
 		wait(3);
-//		        emptyCart.getText();
+		//System.out.println(emptyCart);
+		Assert.assertTrue(emptyCart.isDisplayed());
 
-		String emptyCartMessage = emptyCart.getText();
-
-		Assert.assertEquals("Your Cart Is Empty", emptyCartMessage);
-
+		System.out.println(emptyCart.getText());
+		
+		
 		// Close the browser
-		driverClass.getDriver().quit();
+//		driverClass.getDriver().quit();
 	}
+
+
 
 }

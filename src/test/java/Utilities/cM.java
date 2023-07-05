@@ -6,6 +6,7 @@ import java.util.Set;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.WebElement;
@@ -305,7 +306,10 @@ public class cM extends pageInitializer {
 	
 	
 	
-	
+	public static void scrollPage() {
+	    Actions a = new Actions(driverClass.getDriver());
+	    //scroll down a page
+	    a.sendKeys(Keys.PAGE_DOWN).build().perform();}
 	
 	
 	
