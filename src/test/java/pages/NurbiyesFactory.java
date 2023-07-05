@@ -34,7 +34,7 @@ public class NurbiyesFactory {
 	@FindBy (xpath = "//*[@id=\"variation-0\"]/div[1]/div[2]")
 	public WebElement productDimension;
 	
-	@FindBy (xpath = "//button[@class=\"add-to-cart-row-styled__AddToCartButton-sc-4a84804-0 fbJWBa\"]")
+	@FindBy (xpath = "//button[@class='add-to-cart-row-styled__AddToCartButton-sc-4a84804-0 fbJWBa']")
 	public WebElement addToCart;
 	
 	@FindBy (xpath = "//a[@id=\"continueReviewPage\"]")

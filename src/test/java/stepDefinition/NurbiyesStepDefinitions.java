@@ -1,3 +1,5 @@
+
+
 package stepDefinition;
 
 import Utilities.cM;
@@ -12,7 +14,6 @@ public class NurbiyesStepDefinitions extends cM {
 	@Given("the user is on the home page")
 	public void the_user_is_on_the_home_page() {
 		 String pageTitle = driverClass.getDriver().getTitle();
-		 System.out.println(pageTitle);
 		 Assert.assertEquals("Petco: Pet Supplies, Pet Food, & Pet Products", pageTitle);
 	 
 	}
@@ -40,16 +41,20 @@ public class NurbiyesStepDefinitions extends cM {
 	   
 	}
 
-	@When("confirm that the Reptile category page displays relevant reptile products and information")
+	@Then("confirm that the Reptile category page displays relevant reptile products and information")
 	public void confirm_that_the_reptile_category_page_displays_relevant_reptile_products_and_information() {
-		nf.reptileProductInfo.isDisplayed();
+	 nf.reptileProductInfo.isDisplayed();
 	 
 	}
 		
 	
 	//Second test case: reptileProductDetailsVerificationSteps
-	@When("the user is on the reptile page")
+	@Given("the user is on the reptile page")
 	public void the_user_is_on_the_reptile_page() {
+		nf.menu.click();
+		wait(5);
+		nf.reptilebar.click();
+		nf.reptiletab.click();
 		wait(10);
 		String pageTitle = driverClass.getDriver().getTitle();
 		Assert.assertEquals("Reptile Store & Supplies: Accessories & Products | Petco", pageTitle);
@@ -66,7 +71,7 @@ public class NurbiyesStepDefinitions extends cM {
 	
 	@When("user is on the frogshop page")
 	public void user_is_on_the_frogshop_page() {
-		wait(10);
+		wait(5);
 		String pageTitle = driverClass.getDriver().getTitle();
 		Assert.assertEquals("Frog Shop: Pet Frog Supplies | Petco", pageTitle);
 		
@@ -75,27 +80,35 @@ public class NurbiyesStepDefinitions extends cM {
 
 	@When("click on Zilla Bertical Tropical Kit product")
 	public void click_on_zilla_bertical_tropical_kit_product() {
-		//cM.waitForClickability(nf.product);
+		//doubleClick(nf.product);	
 		nf.product.click();
-		wait(30);
-	
+		wait(10);
 	}
 
-	@When("verify the dimensions of the product")
+	@Then("verify the dimensions of the product")
 	public void verify_the_dimensions_of_the_product() {
-		    nf.productDimension.isDisplayed();
-		    wait(5);
-		    System.out.println("The dimensions are 13.88 IN L X 13.5 IN W X 20 IN H");
-	
+		//wait(10);
+		//cM.waitForClickability(nf.checkout);
+		cM.waitForVisibilty(nf.productDimension);
+		nf.productDimension.isDisplayed();
+		System.out.println("The dimensions is 13.88 IN L X 13.5 IN W X 20 IN H");
+		
 		}
 		
 
 	//Third test case: reptileProductProcessOfCheckout
-	@When("the user is on the product page")
+	@Given("the user is on the product page")
 	public void the_user_is_on_the_product_page() {
+		nf.menu.click();
+		nf.reptilebar.click();
+		nf.frogtab.click();
+		
+		cM.waitForClickability(nf.product);
+		nf.product.click();
+		wait(10);
+		
 		String pageTitle = driverClass.getDriver().getTitle();
 		Assert.assertEquals("Zilla Vertical Tropical Kit, 12x12x18 | Petco", pageTitle);
-		wait(3);
 	    
 		} 
 	
@@ -111,19 +124,19 @@ public class NurbiyesStepDefinitions extends cM {
 		public void navigate_to_cart_page() {
 			String pageTitle = driverClass.getDriver().getTitle();
 			Assert.assertEquals("Shopping Cart", pageTitle);
-			wait(3);
 		   
 		}
 
 		@When("click on Proceed To Checkout button")
 		public void click_on_proceed_to_checkout_button() {
+			cM.waitForClickability(nf.checkout);
 		    nf.checkout.click();
 		    wait(10);
-		    
+		    cM.waitForClickability(nf.email);
 		    nf.email.sendKeys("nurbiye725@gmail.com");
-		    wait(3);
+		    cM.waitForClickability(nf.password);
 		    nf.password.sendKeys("Nurbiye725");
-		    wait(3);  
+		    cM.waitForClickability(nf.submit);
 		    nf.submit.click();   
 		    wait(10);
   
@@ -131,9 +144,10 @@ public class NurbiyesStepDefinitions extends cM {
 
 		@Then("verify that add credit card button is visible")
 		public void verify_that_add_credit_card_button_is_visible() {
+			wait(5);
+			cM.waitForClickability(nf.saveAndContinue);
 			nf.saveAndContinue.click();
-			wait(3); 
+			cM.waitForClickability(nf.creditCard);
 			nf.creditCard.isDisplayed();
-			wait(3); 
 		}
 }
