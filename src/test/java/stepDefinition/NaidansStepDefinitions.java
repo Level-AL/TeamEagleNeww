@@ -12,6 +12,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class NaidansStepDefinitions extends cM {
+
 	JavascriptExecutor js = (JavascriptExecutor) driverClass.getDriver();
 
 	@Given("Run Petco Login Steps")
