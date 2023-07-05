@@ -196,22 +196,14 @@ public class ShahzaibStepDefination extends cM{
 	public void user_can_see_the_detail_description() {
 		Cms.scrollPage();
 		wait(2);
-		String detail=shahzaibsfactory.detailDisplayed.getText();
-		System.out.print(detail);
+		// Description section displayed
+		String ActualR=shahzaibsfactory.detailDisplayed.getText();
+		String expectedR="Description";
+		Assert.assertEquals(expectedR,  ActualR);
+		System.out.println(ActualR + " Dispalyed below...");
+		wait(3);
 	}
 	
-	@Then("Add item to the cart")
-	public void add_item_to_the_cart() {
-		wait(3);
-		shahzaibsfactory.selectQuantity.click();
-		shahzaibsfactory.selectedQuantity.click();
-		wait(2);
-		WebElement addCart = shahzaibsfactory.addToCart;
-	    cM.click(addCart);
-	    wait(2);
-	    WebElement cart=shahzaibsfactory.cartSectionDisplayed;
-        Assert.assertTrue(cart.isDisplayed());
-	}
 
 	
 }

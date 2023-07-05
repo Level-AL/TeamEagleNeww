@@ -113,8 +113,8 @@ public class ShahzaibsFactory {
 	
 	@FindBy(xpath="//*[@data-cnstrc-item-id='5163181']")
 	public WebElement selectitemBySort;
-	
-	@FindBy(xpath="//*[@data-testid='tab-content-tab-1']")
+	//*[@data-testid='tab-content-tab-1']
+	@FindBy(xpath="//div[contains(@class,'details-tab-')]/div/h2")
 	public WebElement detailDisplayed;
 	
 	@FindBy(xpath="//section[@id='cart-left-section']")

@@ -6,7 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-public class Cms {
+public class Cms extends pageInitializer{
 
 	
 	

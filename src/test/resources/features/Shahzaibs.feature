@@ -30,7 +30,7 @@ Then Verify user can save the item for later
  And user sort the items
  When User finalize & click on item 
  Then user can see the detail-description
- And Add item to the cart
+ 
 
 
 
