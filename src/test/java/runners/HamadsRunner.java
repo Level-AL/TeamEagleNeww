@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 		features = "src/test/resources/features/HamadsFeatures.feature",
 		glue = "stepDefinition",
 		dryRun = false,
-		tags = "@test1"
+		tags = "@test2"
 		)
 public class HamadsRunner {
 
