@@ -17,7 +17,7 @@ public class SyedsFactory {
 	public WebElement shopByBrand;
 	@FindBy (xpath = "//*[@class='flyout-styled__FlyoutInnerContainer-sc-317a9e89-3 fzClhA']/div/a")
 	public WebElement wholeHearted;
-	@FindBy (xpath = "//*[@id='collapseOne']/ul/li[5]/a")
+	@FindBy (xpath = "//*[@id='collapseOne']/ul/li[6]/a")
 	public WebElement dogFilter;
 	@FindBy (xpath = "//*[@id='sameDayDeliveryTabInPlp']/div/div/div/a")
 	public WebElement sameDayDelivery;
