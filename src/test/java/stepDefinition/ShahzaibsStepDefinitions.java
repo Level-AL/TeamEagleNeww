@@ -21,7 +21,7 @@ public class ShahzaibsStepDefinitions extends cM {
 		public void user_can_see_the_homepage() {
 
 			// Login
-			driverClass.getDriver();
+			//driverClass.getDriver();
 			WebElement emailBox = shahzaibsfactory.emailBox;
 			sendKey(ConfigurationReader.getProperty("petcoEmail"), emailBox);
 			wait(3);
@@ -41,7 +41,7 @@ public class ShahzaibsStepDefinitions extends cM {
 		@When("User navigate to the bird category")
 		public void user_navigate_to_the_bird_category() {
 			shahzaibsfactory.menuButton.click();
-			cM.wait(2);
+			cM.wait(3);
 			cM.clickSpecificElementInListByText(shahzaibsfactory.listForBirds, "BIRD");
 			shahzaibsfactory.CagesCover.click();
 			cM.wait(2);
