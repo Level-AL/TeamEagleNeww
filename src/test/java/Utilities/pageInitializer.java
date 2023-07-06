@@ -20,7 +20,7 @@ public class pageInitializer extends driverClass {
 	public static TrooksFactory trooksfactory;
 	public static NaidansFactory naidansfactory;
 	public static NaransFactory naransfactory;
-	public static AlexsFactory alexsfactory;
+	public static AlexsFactory af;
 	public static void initialize() {
 	   syedsfactory = new SyedsFactory();
 	   hamadsfactory = new HamadsFactory();
@@ -30,6 +30,6 @@ public class pageInitializer extends driverClass {
 	   trooksfactory = new TrooksFactory();
 	   naidansfactory = new NaidansFactory();
 	   naransfactory = new NaransFactory();
-	   alexsfactory = new AlexsFactory();
+	   af = new AlexsFactory();
 	}
 }

@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.WebElement;
@@ -12,6 +15,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.UnexpectedTagNameException;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public class cM extends pageInitializer {
 
@@ -247,6 +251,11 @@ public class cM extends pageInitializer {
 		
 		waitForVisibilty(element).click();
 	}
+	//Created by Naidan
+	public void clickElement(WebElement element) {
+		element.click();
+	}
+	
 	
 	public static void sendKey ( String keys, WebElement element) {
 		
@@ -270,19 +279,57 @@ public class cM extends pageInitializer {
 		actions.doubleClick().perform();
 	}
 	
+//JS executor click By Naidan
+	
+	public static void jsClick(WebElement element) {
+		try {
+		    // Attempt to click on the element using the regular Selenium click() method
+			element.click();
+		} catch (ElementClickInterceptedException e) {
+		    // If ElementClickInterceptedException is caught, handle it using JavaScript Executor
+
+		    // Create an instance of JavascriptExecutor
+			JavascriptExecutor js = (JavascriptExecutor) driverClass.getDriver();
+
+		    try {
+		        // Scroll the page to bring the element into view
+		    	js.executeScript("arguments[0].scrollIntoView(true);", element);
+
+		        // Click on the element using JavaScript
+		    	js.executeScript("arguments[0].click();", element);
+		    } catch (Exception ex) {
+		        // Handle any exceptions that may occur during the JavaScript execution
+		        ex.printStackTrace();
+		    }
+		}
+	}
 	
 	
 	
 	
 	
+	public static void clickSpecificElementInListByText(List<WebElement> listOfWebElement,
+            String textOfSpecificElement) {
+
+        String text;
+
+        for (int i = 0; i < listOfWebElement.size(); i++) {
+
+            text = listOfWebElement.get(i).getText();
+            if (text.contains(textOfSpecificElement)) {
+                listOfWebElement.get(i).click();
+            }
+        }
+
+    }
+
 	
 	
 	
-	
-	
-	
-	
-	
+	public static void scrollPage() {
+	    Actions a = new Actions(driverClass.getDriver());
+	    //scroll down a page
+	    a.sendKeys(Keys.PAGE_DOWN).build().perform();}
 	
 	
 	
