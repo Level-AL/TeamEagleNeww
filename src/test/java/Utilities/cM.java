@@ -311,12 +311,28 @@ public class cM extends pageInitializer {
 	    //scroll down a page
 	    a.sendKeys(Keys.PAGE_DOWN).build().perform();}
 	
+	public static void clickSpecificElementInListByText(List<WebElement> listOfWebElement,
+            String textOfSpecificElement) {
+
+        String text;
+
+        for (int i = 0; i < listOfWebElement.size(); i++) {
+
+            text = listOfWebElement.get(i).getText();
+            if (text.contains(textOfSpecificElement)) {
+                listOfWebElement.get(i).click();
+            }
+        }
+
+    }
+
 	
 	
 	
-	
-	
-	
+	public static void scrollPage() {
+	    Actions a = new Actions(driverClass.getDriver());
+	    //scroll down a page
+	    a.sendKeys(Keys.PAGE_DOWN).build().perform();}
 	
 	
 	
