@@ -10,8 +10,8 @@ import io.cucumber.junit.CucumberOptions;
 		plugin = {"pretty", "html:target/cucumber-report.html", "json:target/cucumber.json"},
 		features = "src/test/resources/features/ShahzaibsFeatures.feature",
 		glue = "stepDefinition",
-		dryRun = true,
-		tags = ""
+		dryRun = false,
+		tags = "@testCase2"
 		)
 public class ShahzaibsRunner {
 
