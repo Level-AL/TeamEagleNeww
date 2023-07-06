@@ -17,35 +17,40 @@ public class HamadsFactory {
 	public WebElement password;
 	@FindBy(xpath = "//*[@id='WC_AccountDisplay_links_2']")
 	public WebElement loginButton;
-	@FindBy(xpath = "//input[@id=\\\"header-search\\\"]")
+	@FindBy(xpath = "//input[@id='header-search']")
 	public WebElement searchBar;
-	@FindBy(xpath = "//button[@class=\\\"Search__SearchButton-sc-ztrrc9-1 bQTuVQ\\\"]")
+	@FindBy(xpath = "//button[@type=\"submit\"][@aria-label=\"Search\"]")
 	public WebElement searchButton;
 	@FindBy(xpath = "//div[@class='sc-dkzDqf gNublD rec rec-slider-container']/div/div/div[1]/div/div/div/a")
 	public WebElement firstProduct;
-	@FindBy(xpath = "//button[@class=\\\"add-to-cart-row-styled__AddToCartButton-sc-4a84804-0 fbJWBa\\\"]")
+	@FindBy(xpath = "//button[@class='add-to-cart-row-styled__AddToCartButton-sc-4a84804-0 fbJWBa']")
 	public WebElement addingProduct;
-	@FindBy(xpath = "//a[@class=\\\"Shared__SecondaryNavigationButton-sc-ed57a588-1 foAVkh\\\"]")
+	@FindBy(xpath = "//a[@class='Shared__SecondaryNavigationButton-sc-ed57a588-1 foAVkh']")
 	public WebElement addToCartButton;
 	@FindBy(xpath = "//div[@id='cart-heading']/span")
 	public WebElement actualTextCart;
-	@FindBy(xpath = "//a[@id=\\\"continueReviewPage\\\"]")
+	@FindBy(xpath = "//a[@id='continueReviewPage']")
 	public WebElement checkoutButton;
-	@FindBy(xpath = "//div[@class=\\\"AddCreditCard-styled__ButtonContainer-sc-cb788d4e-4 bQaeXc\\\"]")
+	@FindBy(xpath = "//button[contains(text(), 'Add Credit Card')]")
 	public WebElement addToCard;
+	@FindBy(xpath = "//button[@type=\"submit\"]")
+	public WebElement SaveandContinue;
 	@FindBy(id = "AccountNumber")
 	public WebElement cardNumberField;
 	@FindBy(id = "FullName")
 	public WebElement cardNameField;
-	@FindBy(xpath = "/input[@id=\\\"SaveButton\\\"]")
+	@FindBy(xpath = "/input[@id='SaveButton']")
 	public WebElement placeOrderButton;
-	@FindBy(xpath = "//a[@id=\\\"WC_OrderItemDetailsf_links_3_1\\\"]")
+	@FindBy(xpath = "//*[@id=\"WC_OrderItemDetailsf_links_3_1\"]")
 	public WebElement removeAllItemsButton;
-	@FindBy(xpath = "//h1[contains(text(), \\\"Your Cart Is Empty\\\")]")
+	@FindBy(xpath = "//*[@id=\"empty-cart-section\"]/h1")
 	public WebElement emptyCart;
 	
 	
 	
 }
+
+	
+
 
 

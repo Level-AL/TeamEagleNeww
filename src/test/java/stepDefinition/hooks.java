@@ -17,5 +17,6 @@ public class hooks {
     public void tearDown(Scenario scenario){
         System.out.println("I am reporting the results");
         driverClass.tearDown();
+
     }
 }

@@ -306,7 +306,10 @@ public class cM extends pageInitializer {
 	
 	
 	
-	
+	public static void scrollPage() {
+	    Actions a = new Actions(driverClass.getDriver());
+	    //scroll down a page
+	    a.sendKeys(Keys.PAGE_DOWN).build().perform();}
 	
 	public static void clickSpecificElementInListByText(List<WebElement> listOfWebElement,
             String textOfSpecificElement) {
@@ -322,13 +325,10 @@ public class cM extends pageInitializer {
         }
 
     }
+
 	
 	
 	
-	public static void scrollPage() {
-	    Actions a = new Actions(driverClass.getDriver());
-	    //scroll down a page
-	    a.sendKeys(Keys.PAGE_DOWN).build().perform();}
 	
 	
 	
