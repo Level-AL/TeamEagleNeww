@@ -22,6 +22,8 @@ public class ShahzaibsStepDefinitions extends cM {
 
 			// Login
 			//driverClass.getDriver();
+			String loginPage = "https://www.petco.com/shop/LogonForm";
+			driverClass.getDriver().navigate().to(loginPage);
 			WebElement emailBox = shahzaibsfactory.emailBox;
 			sendKey(ConfigurationReader.getProperty("petcoEmail"), emailBox);
 			wait(3);

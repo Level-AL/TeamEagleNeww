@@ -33,7 +33,7 @@ public class driverClass {
 		if (driver == null) {
 			//to make sure the driver doesn't already have a value.
 			
-			switch(ConfigurationReader.getProperty("browser3")) {
+			switch(ConfigurationReader.getProperty("browser")) {
 			
 			case "chrome":
 				WebDriverManager.chromedriver().setup();
@@ -73,7 +73,7 @@ public class driverClass {
 			
 			}
 			
-			driver.get(ConfigurationReader.getProperty("petcoLogin"));
+			driver.get(ConfigurationReader.getProperty("petco"));
 			driver.manage().window().maximize();
 	        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	        pageInitializer.initialize();
