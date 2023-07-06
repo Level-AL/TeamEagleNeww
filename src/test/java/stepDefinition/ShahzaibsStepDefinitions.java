@@ -21,8 +21,7 @@ public class ShahzaibsStepDefinitions extends cM {
 		public void user_can_see_the_homepage() {
 
 			// Login
-			//driverClass.getDriver();
-			String loginPage = "https://www.petco.com/shop/LogonForm";
+			String loginPage = ConfigurationReader.getProperty("loginPage");
 			driverClass.getDriver().navigate().to(loginPage);
 			WebElement emailBox = shahzaibsfactory.emailBox;
 			sendKey(ConfigurationReader.getProperty("petcoEmail"), emailBox);
@@ -43,8 +42,8 @@ public class ShahzaibsStepDefinitions extends cM {
 		@When("User navigate to the bird category")
 		public void user_navigate_to_the_bird_category() {
 			shahzaibsfactory.menuButton.click();
-			cM.wait(3);
-			cM.clickSpecificElementInListByText(shahzaibsfactory.listForBirds, "BIRD");
+			cM.wait(3); //                                            "BIRD"
+			cM.clickSpecificElementInListByText(shahzaibsfactory.listForBirds,ConfigurationReader.getProperty("bird") );
 			shahzaibsfactory.CagesCover.click();
 			cM.wait(2);
 		}
@@ -59,7 +58,7 @@ public class ShahzaibsStepDefinitions extends cM {
 
 		@When("User are able increase the quantity")
 		public void verify_user_on_the_checkout_page() {
-			shahzaibsfactory.increaseQuantity.click();
+			waitForClickability(shahzaibsfactory.increaseQuantity);
 		}
 
 		@Then("Verify user can save the item for later")
@@ -77,7 +76,7 @@ public class ShahzaibsStepDefinitions extends cM {
 		public void go_to_the_bird_category_and_click_on_cages_cage_covers() {
 			shahzaibsfactory.menuButton.click();
 			cM.wait(2);
-			cM.clickSpecificElementInListByText(shahzaibsfactory.listForBirds, "BIRD");
+			cM.clickSpecificElementInListByText(shahzaibsfactory.listForBirds,ConfigurationReader.getProperty("bird"));
 			shahzaibsfactory.CagesCover.click();
 			cM.wait(2);
 		}
@@ -87,7 +86,7 @@ public class ShahzaibsStepDefinitions extends cM {
 			// Select Brand
 			shahzaibsfactory.brandClicked.click();
 			cM.wait(2);
-			cM.clickSpecificElementInListByText(shahzaibsfactory.brandsList, "A&E Cage Company (123)");
+			cM.clickSpecificElementInListByText(shahzaibsfactory.brandsList, ConfigurationReader.getProperty("cage"));
 			cM.wait(2);
 			shahzaibsfactory.brandCloseButton.click();// close the Brand section
 			cM.wait(2);
@@ -95,9 +94,9 @@ public class ShahzaibsStepDefinitions extends cM {
 			// --> Sort Price
 			cM.scrollPage();
 			cM.wait(3);
-			cM.clickSpecificElementInListByText(shahzaibsfactory.priceButtonList, "Price");
+			cM.clickSpecificElementInListByText(shahzaibsfactory.priceButtonList, ConfigurationReader.getProperty("price"));
 			cM.wait(1);
-			cM.clickSpecificElementInListByText(shahzaibsfactory.listInPrice, "$100 to $200 (11)");
+			cM.clickSpecificElementInListByText(shahzaibsfactory.listInPrice, ConfigurationReader.getProperty("priceFilter"));
 
 		}
 
@@ -130,7 +129,7 @@ public class ShahzaibsStepDefinitions extends cM {
 		@Then("View the Cart and remove items")
 		public void view_the_cart_and_checkout_page() {
 			// Verify user on the Cart page by clicking Checkout.
-			wait(2);
+			wait(3);
 			String priceNow = shahzaibsfactory.priceNowText.getText();
 			System.out.println("Price Now: " + priceNow);
 			System.out.println("---------------------------------------------");
@@ -149,7 +148,7 @@ public class ShahzaibsStepDefinitions extends cM {
 		// --------------------------------------------------------------//
 		@When("the user enter in the search bar")
 		public void the_user_enter_in_the_search_bar() {
-			cM.sendKey(shahzaibsfactory.searchBar, "bird cage");
+			cM.sendKey(shahzaibsfactory.searchBar, ConfigurationReader.getProperty("SearchCage"));
 
 		}
 
@@ -170,7 +169,7 @@ public class ShahzaibsStepDefinitions extends cM {
 			// sort
 			shahzaibsfactory.sortByOptions.click();
 			List<WebElement> list = shahzaibsfactory.listSortBy;
-			clickSpecificElementInListByText(list, "Top Rated");
+			clickSpecificElementInListByText(list, ConfigurationReader.getProperty("SortTop"));
 		}
 
 		@When("User finalize & click on item")
