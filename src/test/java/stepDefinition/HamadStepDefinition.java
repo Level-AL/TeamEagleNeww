@@ -1,10 +1,8 @@
 package stepDefinition;
 
-import static org.testng.Assert.assertTrue;
-
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 import Utilities.cM;
 import Utilities.driverClass;
