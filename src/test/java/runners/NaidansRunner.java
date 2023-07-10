@@ -10,7 +10,8 @@ import io.cucumber.junit.CucumberOptions;
 		plugin = {"pretty", "html:target/cucumber-report.html", "json:target/cucumber.json"},
 		features = "src/test/resources/features/NaidansFeatures.feature",
 		glue = "stepDefinition",
-		dryRun = false
+		dryRun = false,
+		tags = ""
 		)
 public class NaidansRunner {
 

@@ -13,17 +13,18 @@ public class NaidansStepDefinitions extends cM {
 
 	@Given("Run Petco Login Steps")
 	public void run_petco_login_steps() {
-		getDriver();
+		//getDriver();
 	}
 
-	@When("click on Deal tab")
+	@Then("click on Deal tab")
 	public void click_on_deal_tab() {
 		jsClick(nf.dealMenu);
+//		nf.dealMenu.click();
 	}
 
 	@Then("click Weekly ad")
 	public void click_weekly_ad() {
-		wait(2);
+		cM.explicitWait();
 		jsClick(nf.weeklyAd);
 	}
 
@@ -57,7 +58,7 @@ public class NaidansStepDefinitions extends cM {
 	@Then("click on Top Deals")
 	public void click_on_top_deals() {
 		wait(2);
-		jsClick(nf.weeklyAd);
+		jsClick(nf.topDeals);
 	}
 
 	@Then("click on Sort By tab")
@@ -69,7 +70,7 @@ public class NaidansStepDefinitions extends cM {
 	@Then("click on Name A to Z option")
 	public void click_on_name_a_to_z_option() {
 		wait(2);
-		jsClick(nf.nameAtoZ);
+		cM.selectDropDownIndex(nf.sortBy, 3);
 	}
 
 	@Then("Verify sorting from A to Z")
