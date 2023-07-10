@@ -11,9 +11,10 @@ import io.cucumber.junit.CucumberOptions;
 		features = "src/test/resources/features/NaransFeatures.feature",
 		glue = "stepDefinition",
 		dryRun = false,
-		tags = ""
+		tags = "@test3"
 		)
 public class NaransRunner {
 	
 }
+
 
